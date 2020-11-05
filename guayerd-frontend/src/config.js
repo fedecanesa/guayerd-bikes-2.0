@@ -1,0 +1,1 @@
+const DOMINIO_APP = "https://guayerd-bikes.herokuapp.com";
