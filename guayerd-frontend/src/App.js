@@ -15,6 +15,7 @@ import HomePage from "./Components/HomePage/HomePage";
 import Footer from "./Components/Footer/Footer";
 import NavBar from "./Components/NavBar/NavBar";
 import ProductsPage from "./Components/ProductsPage/ProductsPage";
+import ContactPage from "./Components/ContactPage/ContactPage"
 
 export default class App extends React.Component
 {
@@ -30,12 +31,12 @@ export default class App extends React.Component
             </Route>
             <Route path="/productos">
               <NavBar />
-              <ProductsPage></ProductsPage>
+              <ProductsPage />
               <Footer />
             </Route>
             <Route path="/contacto">
               <NavBar />
-
+                <ContactPage />
               <Footer />
             </Route>
             <Route path="/*">HOLA 404</Route>
