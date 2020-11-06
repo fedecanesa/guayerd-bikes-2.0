@@ -152,7 +152,7 @@ div.navTitle h1:hover
 img.imagen-principal
 {
     display: block;
-    height: 100vh;
+    height: 800px;
     margin: auto;
     width: 100%;
     object-fit: cover;

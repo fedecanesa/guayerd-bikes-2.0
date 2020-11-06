@@ -3,16 +3,18 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  Redirect
+/*   Link,
+  Redirect */
 } from "react-router-dom";
 
 import './css/style.css' /* TODO Importar css correctamente */
+
 
 /* COMPONENTS */
 import HomePage from "./Components/HomePage/HomePage";
 import Footer from "./Components/Footer/Footer";
 import NavBar from "./Components/NavBar/NavBar";
+import ProductsPage from "./Components/ProductsPage/ProductsPage";
 
 export default class App extends React.Component
 {
@@ -28,7 +30,7 @@ export default class App extends React.Component
             </Route>
             <Route path="/productos">
               <NavBar />
-
+              <ProductsPage></ProductsPage>
               <Footer />
             </Route>
             <Route path="/contacto">

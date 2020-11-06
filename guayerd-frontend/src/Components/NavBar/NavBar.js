@@ -24,7 +24,7 @@ export default class NavBar extends React.Component
                         </h1>
                     </div>
                 </NavLink>
-                <div class="menu">
+                <div className="menu">
                     <NavLink exact to="/">Home</NavLink>
                     <NavLink to="/productos">Productos</NavLink>
                     <NavLink to="/contacto">Contacto</NavLink>
