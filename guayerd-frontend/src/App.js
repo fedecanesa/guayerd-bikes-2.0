@@ -28,6 +28,7 @@ export default class App extends React.Component
       <div className="App">
         <Router>
           <Switch>
+            
             <Route exact path="/">
               <NavBar />
               <HomePage />
@@ -49,7 +50,7 @@ export default class App extends React.Component
             <Route path="/*">
               <NavBar />
               <Error404 />
-              <Footer extratest="Page created by Matias L. Aquino"/>
+              <Footer extraText="Page created by Matias L. Aquino"/>
             </Route>
           
           </Switch>
