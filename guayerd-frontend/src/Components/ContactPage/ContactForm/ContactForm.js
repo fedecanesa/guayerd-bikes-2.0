@@ -52,6 +52,11 @@ export default class ContactForm extends React.Component {
             phone = "Teléfono inválido";
         }
 
+        // SUBJET
+        if (!expresiones.telefono.test(this.state.phone)) {
+            this.setState({subject: "Otro"})
+        }
+
         // MESSAGE
         if (this.state.message.length <= 20) {
             message = "Minimo 20 caracteres";
