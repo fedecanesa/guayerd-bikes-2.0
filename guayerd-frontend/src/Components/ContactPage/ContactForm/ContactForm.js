@@ -41,7 +41,7 @@ export default class ContactForm extends React.Component {
             name = "Nombre invalido";
         }
 
-        // EMAIL
+        // E-MAIL
         if (!expresiones.correo.test(this.state.email)) { 
             email = "Correo invalido";
         }
@@ -64,7 +64,6 @@ export default class ContactForm extends React.Component {
                 errPhone:phone,
                 errMessage:message
             });
-
 
             return false;
         }
@@ -104,37 +103,34 @@ export default class ContactForm extends React.Component {
 
     }
 
-
-
     render() {
 
         return (
             <section className="contacto">
                 <h2>Contacto</h2>
                 <form action="#" method="POST" className="formulario" onSubmit={this.submitForm}>
-                    {/* <input type="hidden" name="grupo" defaultValue="e" /> */}
 
                     <label htmlFor="nombre">Nombre</label>
-                    <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" value={this.state.name} onChange={this.handlerChange} className={this.state.errName !== null ? "error" : ""} />
+                    <input type="text" name="name" id="name" placeholder="Ingrese su nombre" value={this.state.name} onChange={this.handlerChange} className={this.state.errName !== null ? "error" : ""} />
                     {
                         this.state.errName && (
-                            <span>{this.state.errName}</span>
+                            <div className="error-message"><span>{this.state.errName}</span></div>
                         )
                     }
 
-                    <label htmlFor="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Ingresa tu Email (Ej: contacto@guayerd.com)" value={this.state.email} onChange={this.handlerChange} className={this.state.errEmail !== null ? "error" : ""} />
+                    <label htmlFor="email">E-mail</label>
+                    <input type="text" name="email" id="email" placeholder="Ingrese su e-mail (Ej: contacto@guayerd.com)" value={this.state.email} onChange={this.handlerChange} className={this.state.errEmail !== null ? "error" : ""} />
                     {
                         this.state.errEmail && (
-                            <span>{this.state.errEmail}</span>
+                            <div className="error-message"><span>{this.state.errEmail}</span></div>
                         )
                     }
 
-                    <label htmlFor="nombre">Telefono</label>
-                    <input type="text" name="phone" id="phone" placeholder="Ingresa tu telefono" value={this.state.phone} onChange={this.handlerChange} className={this.state.errPhone !== null ? "error" : ""} />
+                    <label htmlFor="nombre">Teléfono</label>
+                    <input type="text" name="phone" id="phone" placeholder="Ingrese su teléfono" value={this.state.phone} onChange={this.handlerChange} className={this.state.errPhone !== null ? "error" : ""} />
                     {
                         this.state.errPhone && (
-                            <span>{this.state.errPhone}</span>
+                            <div className="error-message"><span>{this.state.errPhone}</span></div>
                         )
                     }
 
@@ -154,13 +150,13 @@ export default class ContactForm extends React.Component {
                     value={this.state.message}
                     cols={30} 
                     rows={10} 
-                    placeholder="Escribe tu message" 
+                    placeholder="Ingrese su mensaje" 
                     /* defaultValue={""} */ 
                     onChange={this.handlerChange} 
                     className={this.state.errMessage !== null ? "error" : ""} />
                     {
                         this.state.errMessage && (
-                            <span>{this.state.errMessage}</span>
+                            <div className="error-message"><span>{this.state.errMessage}</span></div>
                         )
                     }
 

@@ -1,0 +1,144 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*CONTAINER*/
+.container {
+    height: 72vh;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*SECTION MAIN*/
+.container .main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*div image*/
+.main .image {
+    width: 40%;
+}
+
+.main .image .img {
+    width: 100%;
+}
+
+/*div content*/
+.main .content {
+    width: 40%;
+    padding-left: 15%;
+}
+
+.content .h2 {
+    font-size: 2rem;
+    word-spacing: 10px;
+}
+
+.content .p {
+    font-size: 1rem;
+    margin-left: 2rem;
+    width: 60%;
+}
+
+.content .a {
+    background-color: #333;
+    color: white;
+    font-size: .9rem;
+    display: inline-block;
+    font-weight: bold;
+    outline: none;
+    padding: 12px 24px;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+
+/*RESPONSIVE*/
+
+@media (max-width:900px) {
+    
+    .main .image {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    /*div content*/
+    .main .content {
+        width: 100%;
+        padding-left: 10%;
+    }
+    
+    .content .h2 {
+        font-size: 2.2rem;
+        margin-top: 40px;
+    }
+
+    .content .p {
+        margin-top: 40px;
+        width: 90%;
+    }
+
+    .content .a {
+        font-size: .7rem;
+        padding: 10px 20px;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    /*MAIN*/
+    h1 {
+        font-size: 1rem;
+    }
+    .container .main{
+        flex-direction: column;
+    }
+
+    /*div image*/
+    .main .image {
+        margin: 0 auto;
+        margin-top: -20px;
+        width: 50%;
+    }
+
+    .main .content {
+        width: 40%;
+        padding-left: 0%;
+    }
+
+    /*div content*/
+    .main .content {
+        width: 100%;
+        padding-left: 0%;
+    }
+    
+    .content .h2 {
+        font-size: 2rem;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .content .p {
+        margin-top: -0px;
+        width: 90%;
+    }
+    
+    .content .a {
+        font-size: .7rem;
+        padding: 8px 18px;
+    }
+
+}

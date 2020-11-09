@@ -1,0 +1,59 @@
+section.contacto form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 450px;
+}
+ 
+section.contacto form label {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+ 
+section.contacto form input,
+section.contacto form select,
+section.contacto form textarea {
+    padding: 10px;
+    border: 2px solid silver;
+    font-size: 18px;
+}
+
+ 
+section.contacto form input[type="submit"] {
+    background-color: #007EA7;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    margin-left: auto;
+    width: 200px;
+    margin-top: 20px;
+}
+ 
+section.contacto form input[type="submit"]:hover {
+    background-color: #003459;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+ 
+section.mapa iframe {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    width: 750px;
+}
+
+.error 
+{
+    box-shadow: 0px 0px 10px red;
+}
+
+div.error-message {
+    color: red;
+    display: flex;
+    margin-top: 5px;
+    justify-content: flex-end;
+
+}

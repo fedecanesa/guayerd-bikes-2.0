@@ -1,0 +1,161 @@
+/* 
+
+Paleta de colores:
+
+https://coolors.co/ffffff-00171f-003459-007ea7-00a8e8
+ 
+Blanco............: #FFFFFF
+Azul oscuro.......: #00171F
+Azul..............: #003459
+Celeste...........: #007EA7
+Celeste claro.....: #00A8E8
+
+*/
+ 
+/*ESTILOS GENERALES -------------------------------------------------------------------------*/
+ 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ 
+nav {
+    background-color: #00171F;
+    /*color: #00171F;*/
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    padding: 20px 40px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+div.navTitle{
+    display: flex;
+}
+
+div.navTitle img
+{
+    height: 30px;
+}
+
+.animar
+{
+    animation: spin 1s infinite 4s ease;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+div.navTitle h1{
+    margin-left: 20px;
+
+}
+ 
+h1 {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+ 
+ 
+div.menu a {
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+ 
+div.menu a:hover {
+    text-decoration: underline;
+}
+ 
+h2 {
+    color: #00171F;
+    margin-left: 10%;
+    margin-bottom: 15px;
+    margin-top: 110px;
+}
+
+label
+{
+    color: #00171F;
+}
+ 
+p {
+    color: #00171F;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.8rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    width: 80%;
+}
+ 
+.footerGeneral h6 {
+    background-color: #00171F;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 200;
+    text-align: center;
+    padding: 40px;
+    margin-top: 80px;
+    width: 100%;
+}
+
+div.contador
+{
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+}
+
+button , input , textarea , select
+{
+    border-radius: 10px;
+}
+
+div.navTitle h1:hover
+{
+    color: #007EA7;
+}
+ 
+.bold
+{
+    font-weight: bold;
+}
+
+
+/* PRUEBAS: Zona de pruebas -> reordenar el caso de adoptarse -----------------------------------------*/
+
+.ml15 { /* https://tobiasahlin.com/moving-letters/#15 */
+    font-weight: 800;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  
+  .ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  
