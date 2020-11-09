@@ -1,11 +1,11 @@
 img.imagen-principal
 {
     display: block;
-    height: 800px;
+    height: 500px;
     margin: auto;
-    width: 100%;
-    object-fit: cover;
-    object-position: bottom;
+    width: 100vw;
+    object-fit: cover   ;
+    object-position: center;
 }
  
 section.principal h2 {
