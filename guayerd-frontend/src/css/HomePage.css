@@ -1,4 +1,4 @@
-img.imagen-principal
+img.main-picture
 {
     display: block;
     height: 500px;
@@ -12,21 +12,21 @@ section.principal h2 {
     margin-top: 60px;
 }
  
-table.premio {
+table.awards {
     border: 1px solid #00171F;
     margin-left: 20px;
     margin: auto;
     width: 50%;
 }
  
-table.premio td {
+table.awards td {
     border: 1px solid #00171F;
     padding: 5px;
     width: 50%;
     text-align: center;
 }
  
-table.premio thead {
+table.awards thead {
     background-color: #007EA7;
     font-weight: 700;
     letter-spacing: 1px;

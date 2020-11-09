@@ -86,11 +86,11 @@ export default class HomeBody extends React.Component
                 </p>
                 
                 <h2>Premios</h2>
-                <table className="premio" cellSpacing={0}>
+                <table className="awards" cellSpacing={0}>
                     <thead>
                         <tr>
                             <td>Año</td>
-                            <td>Premio</td>
+                            <td>Premios</td>
                         </tr>
                     </thead>
                     <tbody>

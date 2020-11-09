@@ -16,17 +16,17 @@ export default class HomeBanner extends React.Component
         const URL_BANNER = `${URL_BACKEND}/getHomeBanner`;
         fetch(URL_BANNER)
         .then((response)=>response.json())
-        .then((objImagen)=>{this.setState({objImg: objImagen})});
+        .then((objImage)=>{this.setState({objImg: objImage})});
     }
 
     render() {
         const { objImg } = this.state;
         return (
-            <div className="imagen-principal">
+            <div className="main-picture">
             {
                 this.state.objImg.title && (  
                     <a href={objImg.link} target="_blank">
-                        <img src={objImg.imgUrl} alt={objImg.title} className="imagen-principal" />
+                        <img src={objImg.imgUrl} alt={objImg.title} className="main-picture" />
                     </a> 
                 )
             }

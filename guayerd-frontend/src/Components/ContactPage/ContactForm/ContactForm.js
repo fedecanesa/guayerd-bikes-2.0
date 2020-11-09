@@ -18,7 +18,6 @@ const initialState = {
 export default class ContactForm extends React.Component {
     constructor() {
         super();
-
         this.state = initialState;
     }
 
@@ -28,32 +27,31 @@ export default class ContactForm extends React.Component {
         let name = null;
         let email = null;
         let phone = null;
-        // let subject = null;
         let message = null;
 
         const expresiones = {
-            nombre: /^[a-zA-ZÀ-ÿ\s\d]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-            correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-            telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+            PATTERN_NAME: /^[a-zA-ZÀ-ÿ\s\d]{1,40}$/, // Letras, espacios y números, pueden llevar acentos.
+            PATTERN_MAIL: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+            PATTERN_PHONE: /^\d{7,14}$/ // 7 a 14 caracteres numericos.
         }
 
         // NAME
-        if (!expresiones.nombre.test(this.state.name)) { // AGREGAR: NO PERMITIR SOLO ESPACIOS
+        if (!expresiones.PATTERN_NAME.test(this.state.name)) { // AGREGAR: NO PERMITIR SOLO ESPACIOS
             name = "Nombre inválido";
         }
 
         // E-MAIL
-        if (!expresiones.correo.test(this.state.email)) { 
+        if (!expresiones.PATTERN_MAIL.test(this.state.email)) { 
             email = "Correo inválido";
         }
 
         // PHONE
-        if (!expresiones.telefono.test(this.state.phone)) {
+        if (!expresiones.PATTERN_PHONE.test(this.state.phone)) {
             phone = "Teléfono inválido";
         }
 
         // SUBJET
-        if (!expresiones.telefono.test(this.state.phone)) {
+        if (this.state.subject === "" || this.state.subject === "-") {
             this.setState({subject: "Otro"})
         }
 
