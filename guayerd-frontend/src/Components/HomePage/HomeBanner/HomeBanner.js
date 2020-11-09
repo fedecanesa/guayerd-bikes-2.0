@@ -1,5 +1,7 @@
 import React from "react";
 
+import URL_BACKEND from "./../../../config";
+
 
 export default class HomeBanner extends React.Component 
 {
@@ -11,9 +13,8 @@ export default class HomeBanner extends React.Component
     }
     
     componentDidMount() {
-        /* const RECURSO_BANNER = `${DOMINIO_APP}/getHomeBanner`; */
-        const RECURSO_BANNER = `https://guayerd-bikes.herokuapp.com/getHomeBanner`;
-        fetch(RECURSO_BANNER)
+        const URL_BANNER = `${URL_BACKEND}/getHomeBanner`;
+        fetch(URL_BANNER)
         .then((response)=>response.json())
         .then((objImagen)=>{this.setState({objImg: objImagen})});
     }

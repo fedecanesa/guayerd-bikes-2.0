@@ -1,4 +1,5 @@
 import React from "react";
+import URL_BACKEND from "../../../config";
 
 const initialState = {
     name: "",
@@ -88,13 +89,13 @@ export default class ContactForm extends React.Component {
             const { name, email , phone , subject , message} = this.state;
             const OBJ_message = {name, email, phone, subject, message};
 
-            const RECURSO_CONSULTAS = "https://guayerd-bikes.herokuapp.com/submitForm";
-            fetch(RECURSO_CONSULTAS, {
+            const URL_QUERYS = `${URL_BACKEND}/submitForm`;
+            fetch(URL_QUERYS, {
                 method:'POST',
                 body: JSON.stringify(OBJ_message),
                 headers:{'Content-Type':'application/json'}})
             .then((response) => response.json())
-            .then((message)=> {!message.err && alert(`Gracias ${message.name}, su message ha sido enviado con éxito.`)})
+            .then((message)=> {!message.err && alert(`Gracias ${message.name}, su mensaje ha sido enviado con éxito.`)})
             .catch(err=> {alert(`No enviado. Intente nuevamente.`)});
 
 
@@ -136,7 +137,7 @@ export default class ContactForm extends React.Component {
 
                     <label htmlFor="tema">Tema</label>
                     <select name="subject" id="subject" value={this.state.subject} onChange={this.handlerChange}>
-                        <option defaultValue="-" disabled>-</option>
+                        <option defaultValue="-" selected readonly>-</option>
                         <option defaultValue="consulta">Consulta</option>
                         <option defaultValue="compras">Compras</option>
                         <option defaultValue="reclamos">Reclamos</option>

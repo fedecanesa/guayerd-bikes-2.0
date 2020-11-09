@@ -1,4 +1,5 @@
 import React from "react";
+import URL_BACKEND from "./../../config";
 import ProductsList from "./ProductsList/ProductsList";
 
 export default class ProductsPage extends React.Component {
@@ -10,8 +11,8 @@ export default class ProductsPage extends React.Component {
     }
 
     componentDidMount(){
-        const RECURSO_PRODUCTOS = "https://guayerd-bikes.herokuapp.com/productList";
-        fetch(RECURSO_PRODUCTOS)
+        const URL_PRODUCTS = `${URL_BACKEND}/productList`;
+        fetch(URL_PRODUCTS)
         .then(response=>response.json())
         .then((products)=>{this.setState({arrayProducts: products})})
         .catch((error)=>{/* TODO controlarCatchHandle */})
