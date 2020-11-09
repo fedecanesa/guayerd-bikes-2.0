@@ -39,17 +39,17 @@ export default class ContactForm extends React.Component {
 
         // NAME
         if (!expresiones.nombre.test(this.state.name)) { // AGREGAR: NO PERMITIR SOLO ESPACIOS
-            name = "Nombre invalido";
+            name = "Nombre inválido";
         }
 
         // E-MAIL
         if (!expresiones.correo.test(this.state.email)) { 
-            email = "Correo invalido";
+            email = "Correo inválido";
         }
 
         // PHONE
         if (!expresiones.telefono.test(this.state.phone)) {
-            phone = "Telefono invalido";
+            phone = "Teléfono inválido";
         }
 
         // MESSAGE
@@ -112,7 +112,14 @@ export default class ContactForm extends React.Component {
                 <form action="#" method="POST" className="formulario" onSubmit={this.submitForm}>
 
                     <label htmlFor="nombre">Nombre</label>
-                    <input type="text" name="name" id="name" placeholder="Ingrese su nombre" value={this.state.name} onChange={this.handlerChange} className={this.state.errName !== null ? "error" : ""} />
+                    <input 
+                        type="text" 
+                        name="name" id="name" 
+                        placeholder="Ingrese su nombre..." 
+                        value={this.state.name} 
+                        onChange={this.handlerChange} 
+                        className={this.state.errName !== null ? "error" : ""} 
+                    />
                     {
                         this.state.errName && (
                             <div className="error-message"><span>{this.state.errName}</span></div>
@@ -120,7 +127,15 @@ export default class ContactForm extends React.Component {
                     }
 
                     <label htmlFor="email">E-mail</label>
-                    <input type="text" name="email" id="email" placeholder="Ingrese su e-mail (Ej: contacto@guayerd.com)" value={this.state.email} onChange={this.handlerChange} className={this.state.errEmail !== null ? "error" : ""} />
+                    <input 
+                        type="text" 
+                        name="email" 
+                        id="email" 
+                        placeholder="Ingrese su e-mail (Ej: contacto@guayerd.com)..." 
+                        value={this.state.email} 
+                        onChange={this.handlerChange} 
+                        className={this.state.errEmail !== null ? "error" : ""}
+                    />
                     {
                         this.state.errEmail && (
                             <div className="error-message"><span>{this.state.errEmail}</span></div>
@@ -128,7 +143,14 @@ export default class ContactForm extends React.Component {
                     }
 
                     <label htmlFor="nombre">Teléfono</label>
-                    <input type="text" name="phone" id="phone" placeholder="Ingrese su teléfono" value={this.state.phone} onChange={this.handlerChange} className={this.state.errPhone !== null ? "error" : ""} />
+                    <input 
+                        type="text" 
+                        name="phone" id="phone" 
+                        placeholder="Ingrese su teléfono..." 
+                        value={this.state.phone} 
+                        onChange={this.handlerChange} 
+                        className={this.state.errPhone !== null ? "error" : ""}
+                    />
                     {
                         this.state.errPhone && (
                             <div className="error-message"><span>{this.state.errPhone}</span></div>
@@ -136,7 +158,12 @@ export default class ContactForm extends React.Component {
                     }
 
                     <label htmlFor="tema">Tema</label>
-                    <select name="subject" id="subject" value={this.state.subject} onChange={this.handlerChange}>
+                    <select 
+                        name="subject" 
+                        id="subject" 
+                        value={this.state.subject} 
+                        onChange={this.handlerChange}
+                    >
                         <option defaultValue="-" selected readonly>-</option>
                         <option defaultValue="consulta">Consulta</option>
                         <option defaultValue="compras">Compras</option>
@@ -146,15 +173,15 @@ export default class ContactForm extends React.Component {
 
                     <label htmlFor="message">Mensaje</label>
                     <textarea 
-                    name="message" 
-                    id="message"
-                    value={this.state.message}
-                    cols={30} 
-                    rows={10} 
-                    placeholder="Ingrese su mensaje" 
-                    /* defaultValue={""} */ 
-                    onChange={this.handlerChange} 
-                    className={this.state.errMessage !== null ? "error" : ""} />
+                        name="message" 
+                        id="message"
+                        value={this.state.message}
+                        cols={30} 
+                        rows={10} 
+                        placeholder="Ingrese su mensaje..." 
+                        onChange={this.handlerChange} 
+                        className={this.state.errMessage !== null ? "error" : ""}
+                    />
                     {
                         this.state.errMessage && (
                             <div className="error-message"><span>{this.state.errMessage}</span></div>

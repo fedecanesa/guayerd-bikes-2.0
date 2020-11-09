@@ -19,7 +19,7 @@ export default class Product extends React.Component
                             <div className="datos">
                                 <div>
                                     <span className="precio-tachado">
-                                        <del>{product.price}</del>
+                                        <del>${product.price}</del>
                                     </span>
                                 </div>
                                 <div>
