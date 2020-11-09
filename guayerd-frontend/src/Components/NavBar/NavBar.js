@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import "./style"
+
 import Logo from "./../../img/LOGO.png"
 
 export default class NavBar extends React.Component 
@@ -18,9 +20,8 @@ export default class NavBar extends React.Component
                 <NavLink exact to="/">
                     <div className="navTitle">
                         <img className="imgLogo spin animar" src={Logo} alt="Logo Guayerd" />
-                        <h1 className="ml15">
-                            <span className="word">Guayerd</span>
-                            <span className="word">Bikes</span>
+                        <h1 className="animate__animated animate__backInRight">
+                            GUAYERD BIKES
                         </h1>
                     </div>
                 </NavLink>
